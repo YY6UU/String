@@ -12,21 +12,20 @@ async def start(bot: Client, msg: Message):
     me2 = (await bot.get_me()).mention
     await bot.send_message(
         chat_id=msg.chat.id,
-        text=f"""**- مرحـبـًا عـزيـزي 🙋** {msg.from_user.mention},
-في {me2},
-**- لبـدء استخـراج الجلسة اختـر بـدء استخـراج الجلسـة .**
-**- إذا كنـت تريـد أن يكون حسـابك في أمـان تام فاختر بايروجـرام أمـا إذا كـان رقمك حقيقـي فاختر تيرمـكس .**
-** - ملاحظـة :**
-**- احـذر مشاركـة الكود لأحـد لأنه يستطيـع اختراق حسـابك ⚠️ .**
-المطـور : [حيدر](tg://user?id={OWNER_ID}) !""",
+        text=f"""أهلًا {msg.from_user.mention},
+
+هذا هو {me2},
+يمكنك استخراج كود تيرمكس وبايروجرام من هنا
+
+من : [حيدر](tg://user?id={OWNER_ID}) !""",
         reply_markup=InlineKeyboardMarkup(
             [
                 [
-                    InlineKeyboardButton(text="- بـدء استخـراج الجلسـة .", callback_data="generate")
+                    InlineKeyboardButton(text="استخراج الجلسة", callback_data="generate")
                 ],
                 [
-                    InlineKeyboardButton("- قنـاة السـورس .", url="https://t.me/kaido_q"),
-                    InlineKeyboardButton("- المطـور .", user_id=OWNER_ID)
+                    InlineKeyboardButton("𝗞𝗔𝗜𝗗𝗢", url="https://t.me/kaido_q"),
+                    InlineKeyboardButton("المطور", user_id=OWNER_ID)
                 ]
             ]
         ),
